@@ -1,0 +1,15 @@
+name: .NET
+
+on:
+  push:
+    branches: [ service-root ]
+
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
